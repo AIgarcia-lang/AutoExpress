@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Auto Express - Más vendidos</title>
+<style>
+  /* Reutilizamos estilos de navegación y footer */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+  }
+  nav {
+    background-color: #004aad;
+    padding: 1rem;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0; padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  nav li {
+    margin: 0 1rem;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .car-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .car-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .car-info {
+    padding: 1rem;
+    flex-grow: 1;
+  }
+
+  .car-info h3 {
+    margin-top: 0;
+    color: #004aad;
+  }
+
+  .car-info .price {
+    font-weight: bold;
+    color: #008000;
+    margin: 0.5rem 0;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #222;
+    color: #eee;
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem 1rem;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
+  footer div {
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  footer .social-icons a {
+    margin: 0 0.5rem;
+    color: #eee;
+    font-size: 1.5rem;
+    text-decoration: none;
+    vertical-align: middle;
+  }
+  footer .social-icons a:hover {
+    color: #004aad;
+  }
+
+  /* Responsive: una columna en móviles, dos en tablets */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 480px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav li {
+      margin: 0.5rem 0;
+    }
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="vehiculos.html">Vehículos</a></li>
+    <li><a href="promociones.html">Promociones</a></li>
+    <li><a href="mas-vendidos.html">Más vendidos</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="sucursales.html">Sucursales</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="grid-container">
+
+    <section class="car-card">
+      <img src="fotos/6.png" width="10"/350x200?text=Toyota+Corolla" />
+      <div class="car-info">
+        <h3>Toyota Corolla</h3>
+        <p class="price">$280,000 MXN</p>
+        <p>El Toyota Corolla ofrece un diseño moderno, excelente eficiencia de combustible y tecnología avanzada para una experiencia de manejo cómoda y segura.</p>
+      </div>
+    </section>
+
+    <section class="car-card">
+      <img src="fotos/7.png" width="10"/350x200?text=Honda+Civic" />
+      <div class="car-info">
+        <h3>Honda Civic</h3>
+        <p class="price">$310,000 MXN</p>
+        <p>El Honda Civic es conocido por su rendimiento dinámico, interiores de alta calidad y tecnología innovadora que satisface las necesidades del conductor moderno.</p>
+      </div>
+    </section>
+
+    <section class="car-card">
+      <img src="fotos/8.png" width="10"/350x200?text=Ford+F-150" alt="Ford F-150" />
+      <div class="car-info">
+        <h3>Ford F-150</h3>
+        <p class="price">$620,000 MXN</p>
+        <p>La Ford F-150 es una camioneta robusta y versátil, ideal para trabajo pesado y aventuras, equipada con tecnología avanzada y comodidad para largas jornadas.</p>
+      </div>
+    </section>
+
+    <section class="car-card">
+      <img src="fotos/9.png" width="10"/350x200?text=Volkswagen+Jetta" alt="Volkswagen Jetta" />
+      <div class="car-info">
+        <h3>Volkswagen Jetta</h3>
+        <p class="price">$295,000 MXN</p>
+        <p>El Volkswagen Jetta combina elegancia y desempeño, con un interior espacioso y tecnología intuitiva para un manejo placentero en ciudad y carretera.</p>
+      </div>
+    </section>
+
+    <section class="car-card">
+      <img src="fotos/10.png" width="10"/350x200?text=Nissan+Versa" alt="Nissan Versa" />
+      <div class="car-info">
+        <h3>Nissan Versa</h3>
+        <p class="price">$220,000 MXN</p>
+        <p>El Nissan Versa destaca por su eficiencia en consumo, amplio espacio interior y tecnología de seguridad avanzada a un precio accesible.</p>
+      </div>
+    </section>
+
+    <section class="car-card">
+      <img src="fotos/11.png" width="10"/350x200?text=Chevrolet+Equinox" alt="Chevrolet Equinox" />
+      <div class="car-info">
+        <h3>Chevrolet Equinox</h3>
+        <p class="price">$420,000 MXN</p>
+        <p>La Chevrolet Equinox es un SUV cómodo y seguro, con gran espacio para pasajeros y carga, perfecta para familias y viajes largos.</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div>
+    <strong>Teléfono:</strong> +52 55 1234 5678<br />
+    <strong>Email:</strong> atencion@autoexpress.com
+  </div>
+  <div>
+    &copy; 2025 Auto Express. Todos los derechos reservados.
+  </div>
+  <div class="social-icons">
+     <a href="https://www.facebook.com/tuUsuario" aria-label="Facebook" title="Facebook">
+    <img src="fotos/3.png" width="30"/ alt="Facebook" />
+  </a>
+  <a href="https://twitter.com/tuUsuario" aria-label="Twitter" title="Twitter">
+    <img src="fotos/4.png" width="34"/ alt="Twitter" />
+  </a>
+  <a href="https://www.instagram.com/tuUsuario" aria-label="Instagram" title="Instagram">
+    <img src="fotos/5.png" width="30"/ alt="Instagram" />
+  </a>
+  </div>
+</footer>
+
+</body>
+</html>
+
